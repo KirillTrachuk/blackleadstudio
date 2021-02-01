@@ -5,14 +5,14 @@ import HomeHeroSection from 'sections/home/homeHeroSection';
 import CommonPage from 'pages/commonPage';
 import LinkFx from 'pages/linkHover.js';
 
-[...document.querySelectorAll('a.menu__link')].forEach((el) => {
-    const elPosition = [...el.parentNode.children].indexOf(el);
-    const fxObj = LinkFx[elPosition];
-    fxObj && new fxObj(el);
-});
-
 export default class HomePage extends CommonPage {
     _setup() {
+        [...document.querySelectorAll('a.menu__link')].forEach((el) => {
+            const elPosition = [...el.parentNode.children].indexOf(el);
+            const fxObj = LinkFx[elPosition];
+            fxObj && new fxObj(el);
+    });
+
         this._sectionTypes = [
             HomeHeroSection,
         ];

@@ -39,9 +39,27 @@ const Home = {
     },
 };
 
+/** @type {SitePage} */
+const Projects = {
+    id: 'projects',
+    templateName: 'app/html/projects.ejs',
+    outputFileName: 'projects.html',
+    title: 'Blacklead',
+    metaTitle: DefaulMetatTitle,
+    description: DefaultDescription,
+    cannonical: Hostname,
+    image: imagePath,
+    entryPoint: './app/js/pages/projectsPage.js',
+    sections: {
+        Hero: {
+        },
+    },
+};
+
 /** @type {SitePage[]} */
 const pages = [
     Home,
+    Projects,
 ];
 
 module.exports = pages;

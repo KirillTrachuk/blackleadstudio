@@ -7,7 +7,6 @@ import Video from 'components/common/video';
 export default class HomeHeroSection extends Section {
     _setupSection(config) {
         super._setupSection(config);
-
         this._scrollText = this._el.querySelector('.scroll-text');
 
         this._marquee = gsap.to(this._scrollText, 6, {
