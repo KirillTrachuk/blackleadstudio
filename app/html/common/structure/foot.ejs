@@ -1,0 +1,27 @@
+
+    <span id="css-variable-test"></span>
+    <!-- include additional scripts here BEFORE app scripts will run -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600&display=swap" rel="stylesheet">
+
+    <%=
+    // Application CSS files
+    htmlWebpackPlugin.files.css.map(src =>
+      `
+      <link href="${src}" rel="stylesheet">`
+        ).join("\n")
+      %>
+          <%=
+              // Application JS files
+              htmlWebpackPlugin.files.js.map(src =>
+              `
+          <script src="${src}"></script>`
+            ).join("\n")
+          %>
+
+    <!-- include additional scripts here AFTER app scripts will run -->
+
+
+</body>
+
+</html>

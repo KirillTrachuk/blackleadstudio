@@ -1,0 +1,267 @@
+@import '~reset-css/reset.css'
+@import './common/index.sass'
+@import './common/gem.scss'
+
+*
+    box-sizing: border-box
+
+html, body
+    width: 100%
+
+body,
+main
+    overflow-x: hidden
+
+body
+    opacity: 1
+    display: flex
+    flex-direction: column
+    font-family: var(--main-font)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+    &.mobile-menu-open
+        overflow: hidden
+    &.modal-active
+        overflow: hidden
+    &.one-page-scroll
+        overflow: hidden
+
+main
+    position: relative
+    width: 100%
+    flex: 1 0 auto
+
+.footer
+    width: 100%
+    flex: 0 0 auto
+
+a
+    text-decoration: none
+    outline: none
+
+img
+    max-width: 100%
+    height: auto
+
+section
+    position: relative
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    overflow-x: hidden
+
+textarea
+  resize: none
+
+.container
+    position: relative
+    width: var(--container-width)
+    min-width: var(--container-width)
+    margin: 0 auto
+    &-fluid
+        position: relative
+        width: 100%
+    &-small
+        margin: 0 auto
+        position: relative
+        width: var(--container-small-width)
+        min-width: var(--container-small-width)
+
+.row
+    display: flex
+    flex-direction: row
+
+.row-reverse
+    display: flex
+    flex-direction: row-reverse
+
+.column
+    display: flex
+    flex-direction: column
+
+.column-reverse
+    display: flex
+    flex-direction: column-reverse
+
+.s-visible,
+.xs-visible,
+.xxs-visible
+    display: none
+
+.lazy
+    opacity: 0
+    transition: opacity 0.4s ease
+    &Loaded
+        opacity: 1
+
+input
+    &::-webkit-input-placeholder,
+    &::placeholder
+        transition: all .3s
+    &:focus
+        &::-webkit-input-placeholder,
+        &::placeholder
+            color: transparent
+
+button[type='submit']
+    // cursor: pointer
+
+.fullscreen-section
+    height: 100vh
+    overflow: hidden
+
+.flex-center
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+.flex-top-center
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+
+.flex-left-center
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+
+.flex-left-top
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+
+.flex-row-between
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+.flex-row-start
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+
+.flex-row-end
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-end
+
+.scroll-down
+    position: absolute
+    width: gem(116)
+    height: gem(116)
+    bottom: gem(32)
+    z-index: 1
+    .arrow
+        transform-origin: 50% 50%
+
+.sm-list
+    width: gem(340)
+    margin-left: gem(102)
+    &-link
+        transition: color 375ms ease
+    &-item
+        display: flex
+        &:hover
+            .sm-list-link
+                color: var(--color-white)
+
+.bg
+    position: fixed
+    display: block
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-image: var(--grad-bg)
+
+.navigation
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: gem(804)
+
+.navigation-progress
+    width: gem(684)
+    height: 1px
+
+.navigation-buttons
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: gem(94)
+    .prev
+        display: flex
+    .next
+        display: flex
+        transform-origin: 50% 50%
+        transform: rotate(180deg)
+
+.navigation-button
+    // cursor: pointer
+    width: gem(40)
+    height: gem(40)
+    opacity: 0.7
+    &.disabled
+        cursor: not-allowed
+
+.navigation
+    .next
+        margin-left: gem(14)
+    .navigation-progress
+        margin-left: gem(26)
+
+@keyframes fadein
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@media only screen and (max-width : 1024px)
+
+    .s-hidden
+        display: none
+
+    .s-visible
+        display: block
+
+@media only screen and (max-width : 768px)
+
+    .xs-hidden
+        display: none
+
+    .xs-visible
+        display: block
+
+@media only screen and (max-width : 480px)
+    body
+        &.modal-active
+            position: fixed
+
+    .xxs-visible
+        display: block
+
+    .xxs-hidden
+        display: none
+
+
+// only mobile landscape
+@media only screen and (max-width: 999px) and (max-height: 567px) and (hover: none) and (any-pointer: coarse) and (orientation: landscape)
+    body
+        &.modal-active
+            position: fixed
+
+    .xxs-visible
+        display: block
+
+    .xxs-hidden
+        display: none

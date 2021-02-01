@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%
+	const page = htmlWebpackPlugin.options && htmlWebpackPlugin.options.page;
+	const title = (page && page.title) || 'Title';
+	const metaTitle = (page && page.metaTitle) || title;
+	const description = (page && page.description) || 'Description';
+	const cannonical = (page && page.cannonical) || '';
+	<!-- const image = cannonical + require('../../../assets/img/' + page.image) || ''; -->
+	const image = '';
+
+	const bodyClassListStr = typeof bodyClassList !== 'undefined' && bodyClassList != null
+		? ` class="${bodyClassList}"`
+		: '';
+%>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title><%= title %></title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="<%= description %>">
+
+	<!-- Open Graph -->
+	<!-- <meta property="og:type" content="website">
+	<meta property="og:site_name" content="<%= title %>">
+	<meta property="og:title" content="<%= metaTitle %>" />
+	<meta property="og:description" content="<%= description %>">
+	<meta property="og:url" content="<%= cannonical %>">
+	<meta property="og:image" content="<%= image %>">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630"> -->
+
+	<!--Twitter-->
+	<!-- <meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="<%= image %>"> -->
+	<!--<meta name="twitter:site" content="@twitter account">-->
+	<!-- <meta name="twitter:title" content="<%= title %>">
+	<meta name="twitter:description" content="<%= description %>"> -->
+
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../../../assets/favicon/site.webmanifest">
+	<link rel="mask-icon" href="../../../assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="theme-color" content="#ffffff"> -->
+	<!-- Open Graph -->
+
+	<!-- <meta property="og:image" content="<%= image %>">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630"> -->
+	<!-- <% if(!(page.id == 'noScript')){ %>
+	<noscript>
+		<meta http-equiv="refresh" content="0;url=/noScript">
+	</noscript>
+	<% } %> -->
+	<!--Twitter-->
+	<!--<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="og-image">
+	<meta name="twitter:site" content="@twitter account">
+	<meta name="twitter:title" content="<%= title %>">
+	<meta name="twitter:description" content="<%= description %>">
+	-->
+
+	<!-- <link rel="preload"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" as="font" type="font/woff2" crossorigin> -->
+
+	@require('../scripts/window.appReady.html')
+
+
+	<style>
+		html{
+			--css-variable-test: 1;
+		}
+		#css-variable-test{
+			display: none;
+			opacity: var(--css-variable-test);
+		}
+		body{
+			opacity: 0;
+		}
+	</style>
+	<style>
+
+	</style>
+</head>
+
+<body>

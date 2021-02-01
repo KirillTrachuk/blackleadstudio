@@ -1,0 +1,120 @@
+<img src="../../../assets/img/pin.png" alt=" " hidden />
+<script>
+    function initMap() {
+        const neshLocation = { lat: 29.753598, lng: -95.365762 };
+
+        // Styles a map in night mode.
+        const map = new google.maps.Map(document.getElementById('map'), {
+            center: neshLocation,
+            zoom: 16,
+            mapTypeControl: false,
+            fullscreenControl: false,
+            streetViewControl: false,
+            styles: [
+                { elementType: 'geometry', stylers: [{ color: '#3E3657' }] },
+                { elementType: 'labels.text.stroke', stylers: [{ visibility: 'off' }] },
+                { elementType: 'labels.text.fill', stylers: [{color: '#8E95B5' }] },
+                {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#8E95B5' }],
+                },
+                {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{ visibility: 'off' }],
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#8E95B5' }],
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{ visibility: 'off' }],
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#352D4F' }],
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#8E95B5' }],
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{ visibility: 'off' }],
+                },
+                {
+                featureType: 'poi.business',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#352D4F' }],
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{ visibility: 'off' }],
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#8E95B5' }],
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#352D4F' }],
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{ visibility: 'off' }],
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#8E95B5' }],
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{ visibility: 'off' }],
+                },
+                {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#8E95B5' }],
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#17263c' }],
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#8E95B5' }],
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{ visibility: 'off' }],
+                },
+            ],
+        });
+
+        const marker = new google.maps.Marker({
+            position: neshLocation,
+            map: map,
+            icon: '../../../assets/img/pin.png',
+        });
+    }
+</script>

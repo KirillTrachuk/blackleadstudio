@@ -1,0 +1,105 @@
+@media only screen and (max-width: 768px)
+	.main-section
+		&-left, &-right
+			display: none
+		&-middle
+			width: 100%
+			background: url(../../assets/img/mobile-grid.svg)
+			background-repeat: no-repeat
+			background-position: center center
+			flex-direction: column
+			.text-around
+				display: none
+			.video-wrapper
+				width: gem(400)
+				height: gem(400)
+				&-image
+					width: gem(500)
+				&-video
+					width: gem(710)
+			.bh-shadow
+				width: gem(280)
+				height: gem(280)
+				margin-top: gem(10)
+
+			.mobile-text
+				display: flex
+				height: gem(30)
+				top: gem(145)
+				width: gem(300)
+				text-transform: uppercase
+				text-align: center
+				opacity: 0.8
+				margin-bottom: gem(68)
+			.mobile-links
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				padding: 0
+				margin: 0
+				bottom: gem(144)
+				margin-top: gem(69)
+				li
+					display: flex
+					justify-content: center
+					align
+
+					margin: gem(0) gem(11)				
+		&-footer
+			height: gem(74)
+			.scroll-text
+				bottom: gem(2)
+@media only screen and (max-width: 480px)
+	.main-section
+		&-middle
+			.mobile-text
+				margin-bottom: gem(62)
+			.video-wrapper
+				width: gem(300)
+				height: gem(300)
+				&-image
+					width: gem(400)
+				&-video
+					width: gem(540)
+			.bh-shadow
+				width: gem(220)
+				height: gem(220)
+				margin-top: gem(10)
+				margin-left: gem(5)
+@media only screen and (max-width: 375px)
+	.main-section
+		&-middle
+			.video-wrapper
+				width: gem(330)
+				height: gem(330)
+				margin-top: gem(-10)
+				&-image
+					width: gem(400)
+				&-video
+					width: gem(600)
+			.mobile-text
+				margin-bottom: gem(75)
+			.mobile-links
+				margin-top: gem(75)
+@media only screen and (max-width: 480px) and (max-height: 734px)
+	.main-section
+		&-middle
+			justify-content: space-around
+			padding: gem(80) 0
+			.mobile-text
+				margin-bottom: 0
+			.mobile-links
+				margin-top: 0
+	.header
+		height: gem(59)
+		&-left, &-right
+			height: gem(59)
+			align-items: center
+			padding-bottom: unset
+			.drop-us
+				top: unset
+
+		
+// only mobile landscape
+// @media only screen and (max-width: 999px) and (max-height: 567px) and (hover: none) and (any-pointer: coarse) and (orientation: landscape)

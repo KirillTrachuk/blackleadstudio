@@ -1,0 +1,239 @@
+
+.header
+	background: var(--color-bg)
+	position: absolute
+	top: 0
+	z-index: 2
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	height: gem(68)
+	border-bottom: gem(1) var(--border-color) solid
+	overflow: hidden
+	&-middle
+		display: flex
+		justify-content: center
+	nav
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: gem(2)
+		a
+			margin-right: gem(54)
+			img
+				width: gem(11)
+			&:nth-child(5)
+				margin-right: gem(0)
+				margin-left: gem(4)
+				margin-top: gem(5)
+	&-left
+		display: flex
+		justify-content: center
+		align-items: center
+		width: gem(420)
+		height: gem(68)
+		border-right: gem(1) var(--border-color) solid
+		.logo
+			width: gem(119	)
+			margin-right: gem(8)
+		.slesh
+			display: flex
+			width: gem(15)
+			height: gem(1)
+			transform: rotate(-60deg)
+			background: var(--color-white)
+		.logo-description
+			position: relative
+			top: gem(1)
+	&-right
+		width: gem(420)
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		height: gem(68)
+		border-left: gem(1) var(--border-color) solid
+
+		.drop-us
+			margin-top: gem(3)
+			position: relative
+			left: gem(-9)
+			top: gem(1)
+			// margin-left: gem(5)
+			.menu__link-deco
+				height: gem(2)
+				margin-top: gem(2)
+				opacity: 1
+	
+	.arrows
+		display: flex
+		flex-direction: row
+		margin-right: gem(30)
+		margin-top: gem(5)
+		margin-left: gem(60)
+		img
+			margin-right: gem(9)
+	.black-arrow
+		&.one
+			order: 1
+		&.two
+			order: 2
+		&.three
+			order: 3
+		&.four
+			order: 4
+	.white-arrow
+		stroke: rgba(255,255,255,0.3)
+		fill: var(--color-bg)
+		margin-right: gem(9)
+		&:nth-child(1)
+			animation: arrow-animation 12s infinite
+		&:nth-child(2)
+			animation: arrow-animation 12s infinite
+			animation-delay: 0.35s
+		&:nth-child(3)
+			animation: arrow-animation 12s infinite
+			animation-delay: 0.7s
+		&:nth-child(4)
+			animation: arrow-animation 12s infinite
+			animation-delay: 1.05s
+	.bg-header-wrapper
+		overflow: hidden
+		width: 200%
+		position: absolute
+	.bg-header
+		top: -50%
+		left: -50%
+		right: -50%
+		bottom: -50%
+		width: 200%
+		height: 200vh
+		background: transparent url('../assets/img/noise-transparent.png') repeat 0 0
+		background-repeat: repeat
+		animation: bg-animation .2s infinite
+		opacity: .9
+		visibility: visible
+		margin-top: -100vh
+		margin-left: -100%
+		z-index: 2	
+	@keyframes arrow-animation
+		0% 
+			stroke: rgba(255,255,255,0.3)
+			fill: var(--color-bg)
+		2.9%
+			stroke: rgba(255,255,255,1)
+			fill: #fff
+		5.8%
+			stroke: rgba(255,255,255,0.3)
+			fill: var(--color-bg)
+		11.6%
+			stroke: rgba(255,255,255,0.3)
+			fill: var(--color-bg)
+		14.5%
+			stroke: rgba(255,255,255,1)
+			fill: #fff
+		17.4%
+			stroke: rgba(255,255,255,0.3)
+			fill: var(--color-bg)
+		23.2%
+			stroke: rgba(255,255,255,0.3)
+			fill: var(--color-bg)
+		26.1%
+			stroke: rgba(255,255,255,1)
+			fill: #fff
+		29%
+			stroke: rgba(255,255,255,0.3)
+			fill: var(--color-bg)
+	// @keyframes arrow-animation
+	// 	0% 
+	// 		stroke: rgba(255,255,255,0.3)
+	// 		fill: var(--color-bg)
+	// 	3.7%
+	// 		stroke: rgba(255,255,255,1)
+	// 		fill: #fff
+	// 	7.4%
+	// 		stroke: rgba(255,255,255,0.3)
+	// 		fill: var(--color-bg)
+	// 	14.8%
+	// 		stroke: rgba(255,255,255,0.3)
+	// 		fill: var(--color-bg)
+	// 	18.5%
+	// 		stroke: rgba(255,255,255,1)
+	// 		fill: #fff
+	// 	22.2%
+	// 		stroke: rgba(255,255,255,0.3)
+	// 		fill: var(--color-bg)
+	// 	29.6%
+	// 		stroke: rgba(255,255,255,0.3)
+	// 		fill: var(--color-bg)
+	// 	33%
+	// 		stroke: rgba(255,255,255,1)
+	// 		fill: #fff
+	// 	36.4%
+	// 		stroke: rgba(255,255,255,0.3)
+	// 		fill: var(--color-bg)
+
+
+
+
+@media only screen and (max-width: 1024px)
+	.header
+		&-left 
+			width: gem(420)
+			.logo
+				width: gem(100)
+		&-right
+			width: gem(420)
+			justify-content: center
+		&-middle
+			width: gem(600)
+
+		.arrows
+			margin-left: 0
+			svg
+				width: gem(20)
+		nav 
+			a 
+				margin-right: gem(20)
+				&:nth-child(5)
+					display: none
+					
+@media only screen and (max-width: 768px)
+	.header
+		height: gem(77)
+		&-middle
+			display: none
+		&-left, &-right
+			width: 50%
+			height: gem(77)
+			align-items: flex-end
+			padding-bottom: gem(20)
+		&-left
+			border-right: gem(0) var(--border-color) solid
+			.logo
+				width: gem(110)
+				margin-left: gem(6)
+				margin-top: gem(2)
+			.slesh , .logo-description
+				display: none
+		&-right
+			.drop-us
+				margin-top: unset
+				left: unset 
+				top: gem(4)
+		.arrows
+			display: none
+
+
+// @media only screen and (max-width: 768px)
+
+
+// @media only screen and (max-width: 480px)
+
+
+// only all tablets
+// @media (any-pointer: coarse) and (min-width: 768px) and (hover: none) and (max-width: 1367px)
+// only mobile landscape
+// (max-width: 999px) and (max-height: 567px) and (hover: none) and (any-pointer: coarse) and (orientation: landscape)
+

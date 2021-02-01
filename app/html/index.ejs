@@ -1,0 +1,76 @@
+<%
+    const page = (htmlWebpackPlugin && htmlWebpackPlugin.options.page);
+    const sections = page.sections;
+    const year = new Date().getFullYear();
+
+    const h = require('../sitemap/helpers');
+%>
+@require('/common/structure/head.ejs', { "bodyClassList" : "one-page-scroll" } )
+@require('./common/header.ejs')
+<main id="main" data-page-id="home">
+    <section class="main-section">
+        <div class="bg"></div>
+        <div class="main-section-left">
+            <div class="video-wrapper">
+                <img src="#" data-src="../assets/img/video_placeholder.png" class="lazy video-placeholder video-wrapper-image" alt=" " data-load-priority="1">
+                <video crossorigin playsinline loop muted class="video-js video-wrapper-video" data-load-priority="2">
+                    <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="#" data-src="../assets/video/Video.webm">
+                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="#" data-src="../assets/video/Video.mp4">
+                    <span class="desc-2">Your browser does not support the video tag. <a href="../assets/video/Video.mp4" download>Download</a></span>
+                </video>
+            </div>
+        </div>
+        <div class="main-section-middle">
+            <p class="desc-2 mobile-text">
+                creative design studio - mobile app website * branding * strategy development
+            </p>
+            <div class="video-wrapper masked">
+                <img src="#" data-src="../assets/img/video_placeholder.png" class="lazy video-placeholder video-wrapper-image" alt=" " data-load-priority="1">
+                <video crossorigin playsinline loop muted class="video-js video-wrapper-video" data-load-priority="2">
+                    <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="#" data-src="../assets/video/Video.webm">
+                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="#" data-src="../assets/video/Video.mp4">
+                    <span class="desc-2">Your browser does not support the video tag. <a href="../assets/video/Video.mp4" download>Download</a></span>
+                </video>
+                <svg width="0" height="0">
+                    <defs>
+                        <clipPath id="clip-path" clipPathUnits="objectBoundingBox">
+                            <path d="M0.23,0.268 L0.987,0.464 L0.507,0 L0.23,0.268 M0.212,0.285 L0,0.489 H1 L0.212,0.285 M0,0.511 H1 L0.208,0.712 L0,0.511 M0.227,0.729 L0.507,1 L0.992,0.531 L0.227,0.729"></path>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="bh-shadow">            </div>
+            <ul class="mobile-links">
+                <li><a href="https://dribbble.com/blacklead-studio" class="desc-1" target="_blank">dribbble</a></li>
+                <li><a href="https://www.behance.net/blacklead_studio" class="desc-1" target="_blank">behance</a></li>
+                <li><a href="https://www.facebook.com/blacklead.studio" class="desc-1" target="_blank">facebook</a></li>
+                <li><a href="https://www.instagram.com/blacklead.studio/" class="desc-1" target="_blank">instagram</a></li>
+            </ul>
+            <img src="../assets/img/text-around-video.svg" alt="" class="text-around">
+        </div>
+        <div class="main-section-right">
+            <div class="video-wrapper">
+                <img src="#" data-src="../assets/img/video_placeholder.png" class="lazy video-placeholder video-wrapper-image" alt=" " data-load-priority="1">
+                <video crossorigin playsinline loop muted class="video-js video-wrapper-video" data-load-priority="2">
+                    <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="#" data-src="../assets/video/Video.webm">
+                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="#" data-src="../assets/video/Video.mp4">
+                    <span class="desc-2">Your browser does not support the video tag. <a href="../assets/video/Video.mp4" download>Download</a></span>
+                </video>
+            </div>
+        </div>
+        <div class="main-section-footer">
+            <div class="bg-footer"></div>
+            <p class="big-text ttu scroll-text">
+                <span class="scroll-text-inner">full&nbsp;<span class="white-text">website</span>&nbsp;is coming soon <span class="romb">
+                    </span></span>
+                <span class="scroll-text-inner">full&nbsp;<span class="white-text">website</span>&nbsp;is coming soon <span class="romb">
+                    </span></span>
+                <span class="scroll-text-inner">full&nbsp;<span class="white-text">website</span>&nbsp;is coming soon <span class="romb">
+                    </span></span>
+                <span class="scroll-text-inner">full&nbsp;<span class="white-text">website</span>&nbsp;is coming soon <span class="romb">
+                    </span></span>
+            </p>
+        </div>
+    </section>
+</main>
+@require('./common/structure/foot.ejs')

@@ -1,0 +1,93 @@
+@import './gem.scss'
+
+main, header
+    opacity: 1
+.ie__main
+    background: #C8F5BC
+.section-ie
+    visibility: visible
+    display: flex
+    align-items: center
+    z-index: initial
+    height: 100vh
+
+    flex-direction: column
+    justify-content: space-between
+    &-logo-wrap
+        margin-top: gem(53)
+        margin-bottom: gem(83)
+        display: flex
+        width: gem(80)
+        height: gem(14)
+    &-footer-wrap
+        margin-top: gem(59)
+        padding-bottom: gem(42)
+    .container
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: gem(-2)
+    .ie__text-block
+        text-align: center
+    .ie__text-block__title
+        margin-bottom: gem(29)
+        font-family: 'graphik-bold', sans-serif
+        font-size: gem(42)
+        line-height: gem(47)
+        color: #25224A
+    .ie__text-block__subtitle
+        margin-bottom: gem(35)
+        font-size: gem(16)
+        line-height: gem(28)
+        font-family: 'Open Sans', sans-serif
+        color: #464154
+    .ie-browsers
+        display: flex
+        flex-direction: column
+        width: gem(540)
+        margin: 0 auto
+    .ie-browsers__item
+        margin-bottom: gem(12)
+        position: relative
+        &:last-child
+            margin-bottom: 0
+        .ie-browsers__item__image,
+        .ie-browsers__item__text
+            transition: all .3s ease
+        &__text
+            font-family: 'graphik-bold', sans-serif
+            font-size: gem(16)
+            line-height: gem(28)
+            color: #25224A
+            font-weight: 500
+        &__arrow
+            position: absolute
+            right: gem(50)
+            width: gem(3)
+            height: gem(6)
+
+    .ie-browsers__item__link
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        height: gem(88)
+        padding-left: gem(40)
+        padding-right: gem(50)
+        background: #FFFFFF
+        border-radius: 0 gem(20) gem(20) gem(20)
+        &:hover
+            .ie-browsers__item__image
+                transform: scale(1.2)
+            .ie-browsers__item__text
+                color: #3E50F7
+                line-height: gem(80)
+    .ie-browsers__item__image
+        width: gem(40)
+        height: gem(40)
+        margin-right: gem(20)
+
+@media only screen and (max-width: 768px)
+
+    body.one-page-scroll
+        .section-ie
+            position: absolute

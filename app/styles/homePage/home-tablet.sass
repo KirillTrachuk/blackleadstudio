@@ -1,0 +1,31 @@
+@media only screen and (max-width: 1024px)
+	.main-section
+		&-middle
+			background-size: cover
+			.text-around
+				width: gem(360)
+				height: gem(360)
+		.video-wrapper
+			width: gem(310)
+			height: gem(320)
+			right: gem(2)
+			&-image
+				width: gem(500)
+			&-video
+				width: gem(570)
+		.bh-shadow
+			width: gem(220)
+			height: gem(220)
+		&-right , &-left
+			background-size: cover
+			.video-wrapper
+				width: gem(150)
+				height: gem(150)
+				&:after
+					width: gem(150)
+					height: gem(150)
+				&-video , &-image
+					width: gem(280)
+
+// only all tablets
+// @media only screen and (any-pointer: coarse) and (min-width: 768px) and (hover: none) and (max-width: 1367px)
