@@ -104,7 +104,7 @@ export default class ImageLazyLoadComponent extends LazyLoadComponent {
      * @returns {ImageLazyLoadComponent[]}
      */
     static RegisterAll(selector = 'img.lazy') {
-        return document.querySelectorAll(selector)
+        return [...document.querySelectorAll(selector)]
             .map(el => new ImageLazyLoadComponent({ el, register: true }));
     }
 }

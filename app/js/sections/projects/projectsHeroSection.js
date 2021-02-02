@@ -1,10 +1,8 @@
 import Section from 'core/section';
 import gsap from 'gsap';
-import Breakpoints from 'app/appBreakpoints';
-import tweenHelpers from 'utils/tweenHelpers';
 import Video from 'components/common/video';
 
-export default class projectsHeroSection extends Section {
+export default class ProjectsHeroSection extends Section {
     _setupSection(config) {
         super._setupSection(config);
         this._scrollText = this._el.querySelector('.scroll-text');
@@ -16,7 +14,7 @@ export default class projectsHeroSection extends Section {
         });
         this._marquee.play(); 
 
-        const videos = this._el.querySelectorAll('.video-js');
+        const videos = [...this._el.querySelectorAll('.video-js')];
 
         this._videos = videos.map(v => new Video({ el: v }));
 
