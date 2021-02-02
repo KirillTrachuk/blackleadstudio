@@ -30,6 +30,8 @@
     "lethargy": "^1.0.9",
     "lottie-web": "^5.6.3",
     "mobx": "^5.15.4",
+    "normalize-wheel": "^1.0.1",
+    "ogl": "^0.0.61",
     "plyr": "^3.5.6",
     "regenerator-runtime": "^0.13.3",
     "reset-css": "^5.0.1"
