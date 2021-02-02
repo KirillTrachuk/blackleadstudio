@@ -5,30 +5,30 @@ import gsap from 'gsap';
 import logger from 'logger';
 // import Cursor from 'modules/cursor';
 
-// function activateMenuItem() {
-//     const menuItems = document.querySelectorAll('header .menu-item');
-//     const { pageId } = document.querySelector('main').dataset;
-//     if (!menuItems || !pageId) {
-//         return;
-//     }
-//     menuItems.forEach(item => {
-//         if (!item.dataset || !item.dataset.id) {
-//             return;
-//         }
-//         if (item.dataset.id === pageId) {
-//             item.classList.add('active');
-//         }
-//     });
-// }
-// // let vh = window.innerHeight * 0.01;
-// // document.documentElement.style.setProperty('--vh', vh + 'px');
-// // console.log(vh);
+function activateMenuItem() {
+    const menuItems = document.querySelectorAll('header .menu-item');
+    const { pageId } = document.querySelector('main').dataset;
+    if (!menuItems || !pageId) {
+        return;
+    }
+    menuItems.forEach(item => {
+        if (!item.dataset || !item.dataset.id) {
+            return;
+        }
+        if (item.dataset.id === pageId) {
+            item.classList.add('active');
+        }
+    });
+}
+// let vh = window.innerHeight * 0.01;
+// document.documentElement.style.setProperty('--vh', vh + 'px');
+// console.log(vh);
 
-// window.addEventListener('resize', () => {
-//     let vh = window.innerHeight * 0.01;
-//     document.documentElement.style.setProperty('--vh', vh + 'px');
-//     console.log(vh);
-// })
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+    console.log(vh);
+})
 export default class CommonPage extends Page {
 
     _setup() {
