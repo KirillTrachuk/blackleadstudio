@@ -25,14 +25,17 @@ export default class ProjectsHeroSection extends Section {
     }
 
     initGallery() {
+        let doc = document.querySelector('html')
+        doc.classList.add('htmlCalc')
+
         const images = document.querySelectorAll('img:not([src*="https://tympanus.net/codrops/wp-content/banners/"])')
         let imagesIndex = 0
-
         Array.from(images).forEach(element => {
             const image = new Image()
 
             // @ts-ignore
             image.src = element.src
+
             image.onload = _ => {
                 imagesIndex += 1
 
@@ -40,9 +43,13 @@ export default class ProjectsHeroSection extends Section {
                     document.documentElement.classList.remove('loading')
                     document.documentElement.classList.add('loaded')
                 }
+
             }
         });
+
         new App();
+        
+        doc.classList.remove('htmlCalc')
     }
 
     resize(width, height) {

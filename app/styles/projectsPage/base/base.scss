@@ -10,15 +10,20 @@
 }
 
 html {
-  background: $color-black;
-  color: $color-white;
-  font-size: calc(100vw / 1920 * 10);
+  background: #0c0c0c;
+  color: #fff;
   height: 100%;
   left: 0;
   position: fixed;
   top: 0;
   user-select: none;
   width: 100%;
+  &.htmlCalc {
+    font-size: calc(100vw / 1920 * 10);
+    img {
+      display: block;
+    }
+  }
 }
 
 body {
@@ -28,10 +33,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior-y: none;
+  
 
   &:after {
     animation: grain 6s steps(10) infinite;
-    background-image: url('/app/assets/grain.png');
+    background-image: url('../../assets/img/grain.png');
     background-repeat: repeat;
     content: '';
     height: 300%;
@@ -64,9 +70,7 @@ body #cdawrap a:hover {
   opacity: 0.7;
 }
 
-img {
-  display: block;
-}
+
 
 canvas {
   height: 100%;
@@ -79,19 +83,6 @@ canvas {
 
   .loaded & {
     opacity: 1
-  }
-}
-
-a {
-  @extend %link--hidden;
-
-  color: $color-white;
-  outline: none;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    outline: none;
   }
 }
 

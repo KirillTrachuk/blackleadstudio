@@ -43,19 +43,19 @@
   }
 }
 
-%link--hidden {
-  @extend %link__wrapper;
+// %link--hidden {
+//   @extend %link__wrapper;
 
-  display: inline-block;
+//   display: inline-block;
 
-  &:after {
-    @extend %link__line;
-    @extend %link__line--hidden;
-  }
+//   &:after {
+//     @extend %link__line;
+//     @extend %link__line--hidden;
+//   }
 
-  &:hover {
-    &:after {
-      @extend %link__line--visible;
-    }
-  }
-}
+//   &:hover {
+//     &:after {
+//       @extend %link__line--visible;
+//     }
+//   }
+// }
