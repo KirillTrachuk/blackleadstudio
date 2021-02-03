@@ -1,6 +1,7 @@
 import Section from 'core/section';
 import gsap from 'gsap';
 import Video from 'components/common/video';
+import App from 'components/gallery/gallery';
 
 export default class ProjectsHeroSection extends Section {
     _setupSection(config) {
@@ -19,6 +20,29 @@ export default class ProjectsHeroSection extends Section {
         this._videos = videos.map(v => new Video({ el: v }));
 
         this._videos.forEach(v => v.activate());
+
+        this.initGallery();
+    }
+
+    initGallery() {
+        const images = document.querySelectorAll('img:not([src*="https://tympanus.net/codrops/wp-content/banners/"])')
+        let imagesIndex = 0
+
+        Array.from(images).forEach(element => {
+            const image = new Image()
+
+            // @ts-ignore
+            image.src = element.src
+            image.onload = _ => {
+                imagesIndex += 1
+
+                if (imagesIndex === images.length) {
+                    document.documentElement.classList.remove('loading')
+                    document.documentElement.classList.add('loaded')
+                }
+            }
+        });
+        new App();
     }
 
     resize(width, height) {

@@ -152,10 +152,6 @@ module.exports = env => {
                     ],
                 },
                 {
-                    test: /\.glsl$/,
-                    use: 'raw-loader',
-                },
-                {
                     test: /browserconfig\.xml$|\.webmanifest/,
                     use: [{
                         loader: 'file-loader',
@@ -165,6 +161,10 @@ module.exports = env => {
                         },
                     }],
                 },
+                {
+                    test: /\.glsl$/,
+                    loader: 'webpack-glsl-loader'
+                }
             ],
         },
         plugins: helpers.wrapPlugins([
