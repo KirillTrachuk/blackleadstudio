@@ -56,10 +56,28 @@ const Projects = {
     },
 };
 
+/** @type {SitePage} */
+const About = {
+    id: 'about',
+    templateName: 'app/html/about.ejs',
+    outputFileName: 'about.html',
+    title: 'Blacklead',
+    metaTitle: DefaulMetatTitle,
+    description: DefaultDescription,
+    cannonical: Hostname,
+    image: imagePath,
+    entryPoint: './app/js/pages/aboutPage.js',
+    sections: {
+        Hero: {
+        },
+    },
+};
+
 /** @type {SitePage[]} */
 const pages = [
     Home,
     Projects,
+    About,
 ];
 
 module.exports = pages;
