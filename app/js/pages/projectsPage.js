@@ -1,10 +1,9 @@
 import 'styles/base.sass';
 import 'styles/projectsPage/index.scss';
 
-import projectsHeroSection from 'sections/projects/projectsHeroSection';
+import ProjectsHeroSection from 'sections/projects/projectsHeroSection';
 import CommonPage from 'pages/commonPage';
 import LinkFx from 'pages/linkHover.js';
-
 
 export default class ProjectsPage extends CommonPage {
     _setup() {
@@ -15,7 +14,7 @@ export default class ProjectsPage extends CommonPage {
         });
 
         this._sectionTypes = [
-            projectsHeroSection,
+            ProjectsHeroSection,
         ];
         super._setup();
     }

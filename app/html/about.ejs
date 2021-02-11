@@ -7,31 +7,32 @@
 %>
 @require('/common/structure/head.ejs', { "bodyClassList" : "one-page-scroll" } )
 @require('./common/header.ejs')
-<main>
-    <div class="message">Some message for mobile (if needed).</div>
-    <div class="frame">
-      
-
-    </div>
-    <div class="content">
-        <div class="fold-content" id="base-content">
-            <!-- CONTENT INSIDE HERE -->
-            <p class="content__type">
-                <span class="content__type-special">SERHII POLYVANYI</span> 
-            </p>
-            <img class="content__img" src="../assets/about/15.jpg" alt="Some image" />
-            <p class="content__type">
-                <span class="content__type-special">KIRILL TRACHUK </span> 
-            </p>
-            <img class="content__img" src="../assets/about/16.jpg" alt="Some image" />
-            <p class="content__type">
-                <span class="content__type-special">VLAD LITOVKA</span>
-            </p>
-            <img class="content__img" src="../assets/about/17.jpg" alt="Some image" />
-            <p class="content__type">Timothy Francis Leary <br />(October 22, 1920 – May 31, 1996)</p>
+<main id="main" data-page-id="about">
+    <section class="main-section">
+        <div class="message">Some message for mobile (if needed).</div>
+        <div class="frame">
+              
         </div>
-        <div class="screen" id="fold-wrapper"></div>
-        <button class="btn-debug" id="btn-debug">See Planes</button>
-    </div>
+        <div class="content">
+            <div class="fold-content" id="base-content">
+                <!-- CONTENT INSIDE HERE -->
+                <p class="content__type">
+                    <span class="content__type-special">SERHII POLYVANYI</span> 
+                </p>
+                <!-- <img class="content__img" src="../assets/about/15.jpg" alt="Some image" /> -->
+                <p class="content__type">
+                    <span class="content__type-special">KIRILL TRACHUK </span> 
+                </p>
+                <!-- <img class="content__img" src="../assets/about/16.jpg" alt="Some image" /> -->
+                <p class="content__type">
+                    <span class="content__type-special">VLAD LITOVKA</span>
+                </p>
+                <!-- <img class="content__img" src="../assets/about/17.jpg" alt="Some image" /> -->
+                <p class="content__type">Timothy Francis Leary <br />(October 22, 1920 – May 31, 1996)</p>
+            </div>
+            <div class="screen" id="fold-wrapper"></div>
+            <button class="btn-debug" id="btn-debug">See Planes</button>
+        </div>
+    </section>
 </main>
 @require('./common/structure/foot.ejs')

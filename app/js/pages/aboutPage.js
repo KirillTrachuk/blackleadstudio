@@ -1,10 +1,9 @@
 import 'styles/base.sass';
-import 'styles/aboutPage/split.css';
+import 'styles/aboutPage/index.scss';
 
-import aboutHeroSection from 'sections/about/aboutHeroSection';
+import AboutHeroSection from 'sections/about/aboutHeroSection';
 import CommonPage from 'pages/commonPage';
 import LinkFx from 'pages/linkHover.js';
-
 
 export default class AboutPage extends CommonPage {
     _setup() {
@@ -15,7 +14,7 @@ export default class AboutPage extends CommonPage {
         });
 
         this._sectionTypes = [
-            aboutHeroSection,
+            AboutHeroSection,
         ];
         super._setup();
     }

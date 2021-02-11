@@ -11,7 +11,7 @@ export default class HomePage extends CommonPage {
             const elPosition = [...el.parentNode.children].indexOf(el);
             const fxObj = LinkFx[elPosition];
             fxObj && new fxObj(el);
-    });
+        });
 
         this._sectionTypes = [
             HomeHeroSection,
