@@ -12,7 +12,7 @@ body {
   font-family: condor-compressed, sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  padding: 5rem 0;
+  padding: 0;
   line-height: 1;
   backface-visibility: hidden;
   -webkit-user-select: none;
@@ -24,9 +24,9 @@ body {
 }
 
 .content__type-special {
-  font-size: 29vw;
+  font-size: 10vw;
   display: block;
-  margin: 0 auto;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -52,7 +52,7 @@ body {
 /* center fold + both side folds need to add up to 100vh  */
 .fold-before,
 .fold-after {
-  height: 20vh;
+  height: 10vh;
 }
 
 .side-left .fold-before-1 {

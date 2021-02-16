@@ -1,11 +1,9 @@
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
+html {
+	position: absolute;
 }
 
-:root {
-	font-size: 15px;
+.header {
+	position: fixed;
 }
 
 body {

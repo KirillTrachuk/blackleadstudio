@@ -1,7 +1,7 @@
 import logger from 'logger';
 import Component from 'core/component';
-import { TweenLite } from 'gsap';
-
+import gsap, { TweenLite } from 'gsap';
+console.log('====================', gsap.to);
 export default class CustomScroll extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(config) {

@@ -43,7 +43,6 @@ export default class AboutHeroSection extends Section {
     }
 
     initTeamList() {
-        console.log('before');
         (function () {
             function lerp(current, target, speed = 0.1, limit = 0.001) {
                 let change = (target - current) * speed;
@@ -201,15 +200,12 @@ export default class AboutHeroSection extends Section {
         
             // Preload images
             const preloadImages = () => {
-                console.log('after2');
                 return new Promise((resolve, reject) => {
                     imagesLoaded(document.querySelectorAll('.content__img'), resolve);
                 });
             };
-            console.log('after1');
             // And then..
             preloadImages().then(() => {
-                console.log('after3');
                 // Remove the loader
                 document.body.classList.remove('loading');
                 // INITIALIZE

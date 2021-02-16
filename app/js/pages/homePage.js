@@ -4,6 +4,8 @@ import gsap from 'gsap';
 import HomeHeroSection from 'sections/home/homeHeroSection';
 import CommonPage from 'pages/commonPage';
 import LinkFx from 'pages/linkHover.js';
+import A from 'modules/customScroll';
+console.log(A);
 
 export default class HomePage extends CommonPage {
     _setup() {
