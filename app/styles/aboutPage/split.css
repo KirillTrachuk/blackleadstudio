@@ -24,16 +24,18 @@ body {
 }
 
 .content__type-special {
-  font-size: 10vw;
+  font-size: 5vw;
   display: flex;
-  padding-top: 50px;
+  padding-top: 120px;
   text-align: center;
 }
 
 .content__img {
-  width: 100%;
+  width: 50%;
   display: block;
   backface-visibility: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Effect Styles */
