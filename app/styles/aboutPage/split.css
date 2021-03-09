@@ -24,10 +24,11 @@ body {
 }
 
 .content__type-special {
-  font-size: 5vw;
+  font-size: 9vw;
   display: flex;
   padding-top: 120px;
   text-align: center;
+  color: #ffffff;
 }
 
 .content__img {
@@ -47,14 +48,14 @@ body {
 
 .fold {
   overflow: hidden;
-  height: 60vh;
+  height: 59vh;
   /*  half the fold-scroller width */
   width: 45vw;
 }
 /* center fold + both side folds need to add up to 100vh  */
 .fold-before,
 .fold-after {
-  height: 30vh;
+  height: 29vh;
 }
 
 .side-left .fold-before-1 {

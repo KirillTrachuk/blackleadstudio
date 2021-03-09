@@ -3,6 +3,7 @@ body {
 	--color-text: #aaa8a6;
 	--color-link: #ae9191;
 	--color-link-hover: #fff;
+	scrollbar-width: none;
 }
 
 .content__type {
