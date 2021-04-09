@@ -76,29 +76,6 @@ section
 		justify-self: center
 		transform: rotate(45deg)
 		
-	a 
-    	text-decoration:none
-	a svg rect 
-    	stroke: #eeeeee
-    	stroke-width: 4
-    	fill: #eeeeee
-    	-moz-transition: all 0.2s ease-in-out
-    	-o-transition: all 0.2s ease-in-out
-    	-webkit-transition: all 0.2s ease-in-out
-    	transition: all 0.2s ease-in-out
-	a svg path 
-    	fill: #000000
-    	-moz-transition: all 0.2s ease-in-out
-    	-o-transition: all 0.2s ease-in-out
-    	-webkit-transition: all 0.2s ease-in-out
-    	transition: all 0.2s ease-in-out
-	a:hover svg rect 
-    	stroke-width: 50
-    	stroke: #ffffff
-	a:hover svg path 
-    	fill: #000000
-
-
 	&-right , &-left
 		.video-wrapper
 			width: gem(200)
@@ -182,8 +159,65 @@ section
 		opacity: .9
 		visibility: visible
 		margin-top: -100vh
+
+// a 
+    // 	text-decoration:none
+	// a svg rect 
+    // 	stroke: #eeeeee
+    // 	stroke-width: 4
+    // 	fill: #eeeeee
+    // 	-moz-transition: all 0.2s ease-in-out
+    // 	-o-transition: all 0.2s ease-in-out
+    // 	-webkit-transition: all 0.2s ease-in-out
+    // 	transition: all 0.2s ease-in-out
+	// a svg path 
+    // 	fill: #000000
+    // 	-moz-transition: all 0.2s ease-in-out
+    // 	-o-transition: all 0.2s ease-in-out
+    // 	-webkit-transition: all 0.2s ease-in-out
+    // 	transition: all 0.2s ease-in-out
+	// a:hover svg rect 
+    // 	stroke-width: 50
+    // 	stroke: #ffffff
+	// a:hover svg path 
+    // 	fill: #000000
 		
 .footer_icon
 	position: absolute
-	bottom: 0
-
+	bottom: gem(25)
+	display: flex
+	a 
+		display: flex
+		margin: auto gem(15)
+		text-decoration: none
+		transition: .3s ease
+		svg
+			fill: #ffffff
+			transition: .3s ease
+			position: relative
+			&:hover
+				animation: draw 1s infinite
+@keyframes draw
+	from
+		filter: drop-shadow(gem(0) gem(0) gem(0) white)
+	20%
+		filter: drop-shadow(gem(2) gem(-2) gem(0) red)
+	40%
+		filter: drop-shadow(gem(-2) gem(2) gem(0) green)
+	60%
+		filter: drop-shadow(gem(2) gem(2) gem(0) blue)
+	80%
+		filter: drop-shadow(gem(-2) gem(-2) gem(0) green)
+	to 
+		filter: drop-shadow(gem(0) gem(0) gem(0) white)
+// @keyframes draw 
+//   	0% 
+//     	filter: drop-shadow(0px 0px 0px yellow)
+//   	50% 
+//     	filter: drop-shadow(0px 16px 6px yellow)
+//   	100% 
+//     	filter: drop-shadow(0px 0px 0px green))
+			
+				
+					
+				
