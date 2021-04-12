@@ -39,6 +39,18 @@ body {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 1024px) {
+	.content__img {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.content__img {
+    width: 85%;
+  }
+}
+
 /* Effect Styles */
 
 .fold-scroller {
